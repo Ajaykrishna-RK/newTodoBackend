@@ -1,9 +1,11 @@
 const express = require("express");
 
 const dotenv = require("dotenv");
+const dbCOnnection = require("./config/dbConnection")
 
 dotenv.config();
 const app = express();
+dbCOnnection()
 
 app.get("/", (req, res) => {
   res.send("Hello, World!");
